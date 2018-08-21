@@ -1,0 +1,8 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "rules": {
+      "react/prop-types": 0,
+      "react/jsx-uses-vars": [2]
+    }
+}

@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch'
 
 import Layout from '../components/Layout'
 
-class Index extends React.Component{
+class Index extends React.Component {
   render () {
     const {posts} = this.props
     console.log(posts)
@@ -31,7 +31,7 @@ class Index extends React.Component{
   }
 }
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function () {
   const res = await fetch('http://www.jonasknutsen.com/wp-json/wp/v2/posts')
   const data = await res.json()
 
