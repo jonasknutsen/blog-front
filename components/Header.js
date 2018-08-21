@@ -4,7 +4,14 @@ class Header extends React.Component {
   render () {
     return (
       <header>
-        This is a header
+        <div className='title'>@jonasknutsen</div>
+        <style jsx>{`
+          .title {
+            font-size: 3rem;
+            width: 100%;
+            text-align: center;
+          }
+        `}</style>
       </header>
     )
   }
