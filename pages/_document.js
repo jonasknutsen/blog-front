@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:400,400i,700' rel='stylesheet' />
+          <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:300,400,400i,700' rel='stylesheet' />
         </Head>
         <body>
           <Main />
