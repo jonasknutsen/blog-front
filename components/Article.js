@@ -1,19 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
 
-class Excerpt extends React.Component {
+class Article extends React.Component {
   render () {
     const {post} = this.props
     return (
       <article>
-        <h2><Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link></h2>
+        <h1>{post.title.rendered}</h1>
         <div className='meta'>
           <span>Published {post.date}</span> <span>(Modified {post.modified})</span>
         </div>
-        <div className='excerpt' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
-        <div className='article-footer'>
-          <Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>Read the post <em>{post.title.rendered}</em></a></Link>
-        </div>
+        <div className='content' dangerouslySetInnerHTML={{__html: post.content.rendered}} />
         <style jsx>{`
           article {
             margin: 1rem;
@@ -24,8 +21,8 @@ class Excerpt extends React.Component {
           .meta {
             font-size: .8rem;
           }
-          h2 > a {
-            color: #000;
+          h1 {
+            margin-top: 0;
           }
         `}</style>
       </article>
@@ -33,4 +30,4 @@ class Excerpt extends React.Component {
   }
 }
 
-export default Excerpt
+export default Article
