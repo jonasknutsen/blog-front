@@ -1,14 +1,18 @@
 import React from 'react'
-import Link from 'next/link'
 
 class Article extends React.Component {
   render () {
     const {post} = this.props
+    const date = new Date(post.date)
+    const modifiedDate = new Date(post.modified)
+    const cleanDate = date.toLocaleDateString()
+    const cleanModifiedDate = modifiedDate.toLocaleDateString()
+    const diffDate = post.date === post.modified
     return (
       <article>
         <h1>{post.title.rendered}</h1>
         <div className='meta'>
-          <span>Published {post.date}</span> <span>(Modified {post.modified})</span>
+          <span>Published {cleanDate}</span> {!diffDate && <span>(Modified {cleanModifiedDate})</span>}
         </div>
         <div className='content' dangerouslySetInnerHTML={{__html: post.content.rendered}} />
         <style jsx>{`
@@ -23,6 +27,7 @@ class Article extends React.Component {
           }
           h1 {
             margin-top: 0;
+            margin-bottom: 0;
           }
         `}</style>
       </article>

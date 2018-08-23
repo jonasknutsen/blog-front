@@ -4,11 +4,16 @@ import Link from 'next/link'
 class Excerpt extends React.Component {
   render () {
     const {post} = this.props
+    const date = new Date(post.date)
+    const modifiedDate = new Date(post.modified)
+    const cleanDate = date.toLocaleDateString()
+    const cleanModifiedDate = modifiedDate.toLocaleDateString()
+    const diffDate = post.date === post.modified
     return (
       <article>
         <h2><Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link></h2>
         <div className='meta'>
-          <span>Published {post.date}</span> <span>(Modified {post.modified})</span>
+          <span>Published {cleanDate}</span> {!diffDate && <span>(Modified {cleanModifiedDate})</span>}
         </div>
         <div className='excerpt' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
         <div className='article-footer'>
@@ -23,6 +28,10 @@ class Excerpt extends React.Component {
           }
           .meta {
             font-size: .8rem;
+          }
+          h2 {
+            margin-top: 0;
+            margin-bottom: 0;
           }
           h2 > a {
             color: #000;
