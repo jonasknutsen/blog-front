@@ -18,10 +18,14 @@ class Excerpt extends React.Component {
           article {
             margin: 1rem;
             padding: 1rem;
-            box-shadow: 0px 1px 18px 0px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 3px 5px -1px rgba(0, 0, 0, 0.12);
+            background-color: #fafafa;
+            border: 1px solid #f0f0f0;
           }
           .meta {
             font-size: .8rem;
+          }
+          h2 > a {
+            color: #000;
           }
         `}</style>
       </article>

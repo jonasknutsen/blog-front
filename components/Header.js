@@ -25,7 +25,7 @@ class Header extends React.Component {
           </div>
         </div>
         <div className='title'>@jonasknutsen</div>
-        <div className='subtitle'>Code and rants and rock and roll</div>
+        <div className='subtitle'>Words and code and rock and roll</div>
         <style jsx>{`
           .topline {
             background-color: #fafafa;
@@ -52,7 +52,6 @@ class Header extends React.Component {
           }
           a {
             text-transform: uppercase;
-            text-decoration: none;
             color: #363940;
           }
           .title {

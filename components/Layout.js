@@ -22,6 +22,12 @@ const Layout = (props) => (
         max-width: 1000px;
         margin: 0 auto;
       }
+      a, h2 > a {
+        text-decoration: none;
+      }
+      a:hover, h2 > a:hover {
+        text-decoration: underline;
+      }
     `}</style>
   </div>
 )
