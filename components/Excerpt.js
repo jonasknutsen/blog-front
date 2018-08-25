@@ -1,23 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
+import {PostDate} from '@jonasknutsen/wp-react-components'
+
+import {stripDomain} from '../utils/format'
 
 class Excerpt extends React.Component {
   render () {
     const {post} = this.props
-    const date = new Date(post.date)
-    const modifiedDate = new Date(post.modified)
-    const cleanDate = date.toLocaleDateString()
-    const cleanModifiedDate = modifiedDate.toLocaleDateString()
-    const diffDate = post.date === post.modified
+    const link = stripDomain(post.link)
     return (
       <article>
         <h2><Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link></h2>
-        <div className='meta'>
-          <span>Published {cleanDate}</span> {!diffDate && <span>(Modified {cleanModifiedDate})</span>}
-        </div>
+        <PostDate post={post} className='meta' />
         <div className='excerpt' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
         <div className='article-footer'>
-          <Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>Read the post <em>{post.title.rendered}</em></a></Link>
+          <Link as={link} href={`/post?slug=${post.slug}`}><a>Read the post <em>{post.title.rendered}</em></a></Link>
         </div>
         <style jsx>{`
           article {
@@ -25,9 +22,6 @@ class Excerpt extends React.Component {
             padding: 1rem;
             background-color: #fafafa;
             border: 1px solid #f0f0f0;
-          }
-          .meta {
-            font-size: .8rem;
           }
           h2 {
             margin-top: 0;

@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jonasknutsen/blog-front#readme",
   "dependencies": {
+    "@jonasknutsen/wp-react-components": "0.0.1",
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "mdi-react": "^4.1.0",

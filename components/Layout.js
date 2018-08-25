@@ -42,6 +42,9 @@ const Layout = (props) => (
       a:hover, h2 > a:hover {
         text-decoration: underline;
       }
+      meta {
+        font-size: .8rem;
+      }
     `}</style>
   </div>
 )
