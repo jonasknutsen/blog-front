@@ -17,7 +17,6 @@ class Post extends React.Component {
 
 Post.getInitialProps = async function (context) {
   const {slug} = context.query
-  console.log(slug)
   const res = await fetch(`http://www.jonasknutsen.com/wp-json/wp/v2/posts?slug=${slug}`)
   const post = await res.json()
 

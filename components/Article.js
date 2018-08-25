@@ -1,5 +1,5 @@
 import React from 'react'
-import {PostDate} from 'react-wordpress-utils'
+import {PostDate} from '@jonasknutsen/wp-react-components'
 
 class Article extends React.Component {
   render () {

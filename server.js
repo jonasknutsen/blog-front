@@ -15,6 +15,12 @@ app.prepare()
       app.render(req, res, actualPage, queryParams)
     })
 
+    server.get('/:year/:month/:day/:slug', (req, res) => {
+      const actualPage = '/post'
+      const queryParams = { slug: req.params.slug }
+      app.render(req, res, actualPage, queryParams)
+    })
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
