@@ -9,16 +9,25 @@ app.prepare()
   .then(() => {
     const server = express()
 
-    server.get('/p/:slug', (req, res) => {
+    server.get('/:year/:month/:day/:slug', (req, res) => {
       const actualPage = '/post'
       const queryParams = { slug: req.params.slug }
       app.render(req, res, actualPage, queryParams)
     })
 
-    server.get('/:year/:month/:day/:slug', (req, res) => {
-      const actualPage = '/post'
-      const queryParams = { slug: req.params.slug }
-      app.render(req, res, actualPage, queryParams)
+    server.get('/contact', (req, res) => {
+      const actualPage = '/contact'
+      app.render(req, res, actualPage)
+    })
+
+    server.get('/archive', (req, res) => {
+      const actualPage = '/archive'
+      app.render(req, res, actualPage)
+    })
+
+    server.get('/about', (req, res) => {
+      const actualPage = '/about'
+      app.render(req, res, actualPage)
     })
 
     server.get('*', (req, res) => {
