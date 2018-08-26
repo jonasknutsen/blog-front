@@ -6,6 +6,12 @@ import Layout from '../components/Layout'
 import {stripDomain} from '../utils/format'
 
 class Archive extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      exclude: []
+    }
+  }
   render () {
     const {posts, categories} = this.props
     return (
@@ -13,8 +19,9 @@ class Archive extends React.Component {
         <h1>Archive for @jonasknutsen</h1>
         <ul className='category-list'>
           {categories.map((category, index) => {
+            const elementClass = this.state.exclude.includes(category.id) ? 'excluded' : ''
             return (
-              <li key={index} onClick={() => this.filterCategory(category.id)}>
+              <li key={index} onClick={() => this.filterCategory(category.id)} className={elementClass}>
                 {category.name}
               </li>
             )
@@ -41,13 +48,26 @@ class Archive extends React.Component {
             background-color: red;
             margin: 2px;
           }
+          .category-list li.excluded {
+            background-color: blue;
+          }
         `}</style>
       </Layout>
     )
   }
 
   filterCategory = (cat) => {
-    console.log('category', cat)
+    if (this.state.exclude.includes(cat)) {
+      this.setState({
+        exclude: this.state.exclude.filter(function (category) {
+          return category !== cat
+        })
+      })
+    } else {
+      this.setState({
+        exclude: [...this.state.exclude, cat]
+      })
+    }
   }
 }
 
