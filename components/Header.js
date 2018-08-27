@@ -28,8 +28,8 @@ class Header extends React.Component {
         <div className='subtitle'>Words and code and rock and roll</div>
         <style jsx>{`
           .topline {
-            background-color: #fafafa;
-            border-bottom: 1px solid #f0f0f0;
+            background-color: #F0E8D0;
+            border-bottom: 1px solid #888;
             font-size: 1rem;
           }
           .topline-inner {
@@ -65,7 +65,6 @@ class Header extends React.Component {
           .subtitle {
             margin-bottom: 4rem;
             text-align: center;
-            font-size: .8rem;
           }
         `}</style>
       </header>

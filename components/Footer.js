@@ -20,8 +20,8 @@ class Footer extends React.Component {
         <style jsx>{`
           footer {
             margin-top: 1rem;
-            border-top: 1px solid #f0f0f0;
-            background-color: #fafafa;
+            border-top: 1px solid #888;
+            background-color: #F0E8D0;
             padding-bottom: 1rem;
           }
           ul {

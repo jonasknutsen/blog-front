@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
+import {PostDate} from '@jonasknutsen/wp-react-components'
 
 import Layout from '../components/Layout'
 import {stripDomain} from '../utils/format'
@@ -29,11 +30,13 @@ class Archive extends React.Component {
         </ul>
         <ul className='post-list'>
           {posts.map((post, index) => {
-            return (
-              <li key={index}>
-                <Link as={stripDomain(post.link)} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link>
-              </li>
-            )
+            if (!post.categories.some(p => this.state.exclude.includes(p))) {
+              return (
+                <li key={index}>
+                  <Link as={stripDomain(post.link)} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link>
+                </li>
+              )
+            }
           })}
         </ul>
         <style jsx>{`
@@ -45,11 +48,13 @@ class Archive extends React.Component {
           }
           .category-list li {
             padding: .5rem;
-            background-color: red;
+            background-color: #F0E8D0;
             margin: 2px;
+            cursor: pointer;
           }
           .category-list li.excluded {
-            background-color: blue;
+            background-color: #888;
+            color: #fff;
           }
         `}</style>
       </Layout>
