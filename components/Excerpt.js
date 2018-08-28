@@ -10,7 +10,7 @@ class Excerpt extends React.Component {
     const link = stripDomain(post.link)
     return (
       <article>
-        <h2><Link as={`/p/${post.slug}`} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link></h2>
+        <h2><Link as={link} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link></h2>
         <PostDate post={post} className='meta' />
         <div className='excerpt' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
         <div className='article-footer'>
