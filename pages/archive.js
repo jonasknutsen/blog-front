@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
-import {PostDate} from '@jonasknutsen/wp-react-components'
+import {PostDateInline} from '@jonasknutsen/wp-react-components'
 
 import Layout from '../components/Layout'
 import {stripDomain} from '../utils/format'
@@ -33,7 +33,7 @@ class Archive extends React.Component {
             if (!post.categories.some(p => this.state.exclude.includes(p))) {
               return (
                 <li key={index}>
-                  <Link as={stripDomain(post.link)} href={`/post?slug=${post.slug}`}><a>{post.title.rendered}</a></Link>
+                  <Link as={stripDomain(post.link)} href={`/post?slug=${post.slug}`}><a><span className='content' dangerouslySetInnerHTML={{__html: post.title.rendered}} /> - <PostDateInline post={post} /></a></Link>
                 </li>
               )
             }
@@ -55,6 +55,13 @@ class Archive extends React.Component {
           .category-list li.excluded {
             background-color: #888;
             color: #fff;
+          }
+          .post-list {
+            list-style-type: none;
+            padding-left: 0;
+          }
+          .post-list li {
+            padding: .2rem;
           }
         `}</style>
       </Layout>
