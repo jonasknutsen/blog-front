@@ -10,16 +10,15 @@ class Header extends React.Component {
           <div className='topline-inner'>
             <nav>
               <ul>
-                <li><Link href='/about'><a>About</a></Link></li>
+                <li><Link href='/'><a>Home</a></Link></li>
                 <li><Link href='/archive'><a>Archive</a></Link></li>
-                <li><Link href='/contact'><a>Contact</a></Link></li>
               </ul>
             </nav>
             <div className='links'>
               <ul>
-                <li><a href='https://www.twitter.com/jonasknutsen'><TwitterBoxIcon /></a></li>
-                <li><a href='https://no.linkedin.com/in/jonas-knutsen-2bb4291b'><LinkedinBoxIcon /></a></li>
-                <li><a href='https://github.com/jonasknutsen'><GithubBoxIcon /></a></li>
+                <li><a href='https://www.twitter.com/jonasknutsen' title='Jonas Knutsen on Twitter'><TwitterBoxIcon /></a></li>
+                <li><a href='https://no.linkedin.com/in/jonas-knutsen-2bb4291b' title='Jonas Knutsen on LinkedIn'><LinkedinBoxIcon /></a></li>
+                <li><a href='https://github.com/jonasknutsen' title='Jonas Knutsen on GitHub'><GithubBoxIcon /></a></li>
               </ul>
             </div>
           </div>
@@ -39,6 +38,9 @@ class Header extends React.Component {
             display: flex;
             flex-directtion: row;
             justify-content: space-between;
+          }
+          .topline-inner nav {
+            margin-left: 1rem;
           }
           ul {
             display: flex;

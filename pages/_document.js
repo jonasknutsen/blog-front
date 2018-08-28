@@ -9,9 +9,11 @@ export default class MyDocument extends Document {
 
   render () {
     return (
-      <html>
+      <html lang='en'>
         <Head>
           <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:300,400,400i,700' rel='stylesheet' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <title>@jonasknutsen - The blog of Jonas Knutsen</title>
         </Head>
         <body>
           <Main />

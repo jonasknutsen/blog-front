@@ -9,9 +9,7 @@ class Footer extends React.Component {
         <div className='links'>
           <ul>
             <li><Link href='/'><a>Home</a></Link></li>
-            <li><Link href='/about'><a>About</a></Link></li>
             <li><Link href='/archive'><a>Archive</a></Link></li>
-            <li><Link href='/contact'><a>Contact</a></Link></li>
           </ul>
         </div>
         <div className='copyright'>

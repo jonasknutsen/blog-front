@@ -17,11 +17,21 @@ const Layout = (props) => (
       body {
         font-family: 'Ubuntu', sans-serif;
         font-size: 16px;
+        height: 100%;
+      }
+      #__next {
+        height: 100%;
+      }
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
       main {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
+        flex: 1;
       }
       h1 {
         font-size: 3rem;

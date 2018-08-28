@@ -15,18 +15,8 @@ app.prepare()
       app.render(req, res, actualPage, queryParams)
     })
 
-    server.get('/contact', (req, res) => {
-      const actualPage = '/contact'
-      app.render(req, res, actualPage)
-    })
-
     server.get('/archive', (req, res) => {
       const actualPage = '/archive'
-      app.render(req, res, actualPage)
-    })
-
-    server.get('/about', (req, res) => {
-      const actualPage = '/about'
       app.render(req, res, actualPage)
     })
 

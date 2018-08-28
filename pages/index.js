@@ -1,6 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
 import Link from 'next/link'
+import Head from 'next/head'
 
 import Layout from '../components/Layout'
 import Excerpt from '../components/Excerpt'
@@ -10,6 +11,10 @@ class Index extends React.Component {
     const {posts} = this.props
     return (
       <Layout>
+        <Head>
+          <title>The blog of Jonas Knutsen - @jonasknutsen</title>
+          <meta name='description' content='Personal blog of me, Jonas Knutsen. Where I write mostly about coding, but also about technology and pop culture.' />
+        </Head>
         {posts.map((post, i) => {
           return (
             <Excerpt key={i} post={post} />
