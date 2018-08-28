@@ -1,11 +1,16 @@
 import React from 'react'
 import {PostDate} from '@jonasknutsen/wp-react-components'
+import Head from 'next/head'
 
 class Article extends React.Component {
   render () {
     const {post} = this.props
     return (
       <article>
+        <Head>
+          <title>{post.title.rendered} - @jonasknutsen</title>
+          <meta name='description' content={post.excerpt.rendered} />
+        </Head>
         <h1>{post.title.rendered}</h1>
         <PostDate post={post} className='meta' />
         <div className='content' dangerouslySetInnerHTML={{__html: post.content.rendered}} />
