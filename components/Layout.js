@@ -1,12 +1,9 @@
 import React from 'react'
-import Router from 'next/router'
 
 import Header from './Header'
 import Footer from './Footer'
 
-import * as gtag from '../lib/gtag'
-
-Router.events.on('routeChangeComplete', url => gtag.pageview(url))
+import GaWrapper from '../lib/analytics'
 
 const Layout = (props) => (
   <div className='wrapper'>
@@ -86,4 +83,4 @@ const Layout = (props) => (
   </div>
 )
 
-export default Layout
+export default GaWrapper(Layout)
