@@ -1,7 +1,12 @@
 import React from 'react'
+import Router from 'next/router'
 
 import Header from './Header'
 import Footer from './Footer'
+
+import * as gtag from '../lib/gtag'
+
+Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 const Layout = (props) => (
   <div className='wrapper'>

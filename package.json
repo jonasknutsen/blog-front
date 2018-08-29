@@ -26,6 +26,8 @@
   "homepage": "https://github.com/jonasknutsen/blog-front#readme",
   "dependencies": {
     "@jonasknutsen/wp-react-components": "^0.1.0",
+    "dotenv": "^6.0.0",
+    "dotenv-webpack": "^1.5.7",
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "mdi-react": "^4.1.0",
