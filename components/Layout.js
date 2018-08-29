@@ -34,14 +34,14 @@ const Layout = (props) => (
         flex: 1;
       }
       h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 400;
       }
       h2 {
-        font-size: 2.25rem;
+        font-size: 1.625rem;
       }
       h3 {
-        font-size: 1.75rem;
+        font-size: 1.375rem;
       }
       h4 {
         font-size: 1.125rem;
@@ -54,6 +54,28 @@ const Layout = (props) => (
       }
       meta {
         font-size: .8rem;
+      }
+      @media only screen and (min-width: 576px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 2.25rem;
+        }
+        h3 {
+          font-size: 1.75rem;
+        }
       }
     `}</style>
   </div>
