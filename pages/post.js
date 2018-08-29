@@ -3,13 +3,16 @@ import fetch from 'isomorphic-fetch'
 
 import Layout from '../components/Layout'
 import Article from '../components/Article'
+import AdSense from '../components/AdSense'
 
 class Post extends React.Component {
   render () {
     const {post} = this.props
     return (
       <Layout>
+        <AdSense />
         <Article post={post[0]} />
+        <AdSense />
       </Layout>
     )
   }
