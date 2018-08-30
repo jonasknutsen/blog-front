@@ -21,6 +21,21 @@ class Header extends React.Component {
                 <li><a href='https://github.com/jonasknutsen' title='Jonas Knutsen on GitHub'><GithubBoxIcon /></a></li>
               </ul>
             </div>
+            <script dangerouslySetInnerHTML={
+              {
+                __html: `{
+                  "@context": "http://schema.org/",
+                  "@type": "Person",
+                  "name": "Jonas Knutsen",
+                  "sameAs": [
+                    "https://www.twitter.com/jonasknutsen",
+                    "https://no.linkedin.com/in/jonas-knutsen-2bb4291b",
+                    "https://github.com/jonasknutsen"
+                  ]
+                }`
+              }
+            } type='application/ld+json'
+            />
           </div>
         </div>
         <div className='title'>@jonasknutsen</div>
