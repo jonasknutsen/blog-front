@@ -38,7 +38,7 @@ class Index extends React.Component {
 }
 
 Index.getInitialProps = async function () {
-  const res = await fetch('http://www.jonasknutsen.com/wp-json/wp/v2/posts')
+  const res = await fetch('http://cms.jonasknutsen.com/wp-json/wp/v2/posts')
   const data = await res.json()
 
   return {
