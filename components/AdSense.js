@@ -13,8 +13,8 @@ class AdSense extends React.Component {
         <span className='ad-title'>Advertisement</span>
         <ins className='adsbygoogle'
           style={{ display: 'block' }}
-          data-ad-client={config.adSenseClient}
-          data-ad-slot={config.adSenseSlot}
+          data-ad-client='ca-pub-9471602433076064'
+          data-ad-slot='7332209006'
           data-ad-format='auto'
           data-full-width-responsive='true'
           data-adtest='on'
