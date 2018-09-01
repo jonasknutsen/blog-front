@@ -66,6 +66,12 @@ class Layout extends React.Component {
           meta {
             font-size: .8rem;
           }
+          pre {
+            font-family: "Ubuntu Mono", monospace;
+            background-color: #000;
+            color: #fff;
+            padding: .5rem;
+          }
           @media only screen and (min-width: 576px) {
             h1 {
               font-size: 2.5rem;

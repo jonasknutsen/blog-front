@@ -38,7 +38,7 @@ class Header extends React.Component {
             />
           </div>
         </div>
-        <div className='title'>@jonasknutsen</div>
+        <div className='title'><Link href='/'><a>@jonasknutsen</a></Link></div>
         <div className='subtitle'>Words and code and rock and roll</div>
         <style jsx>{`
           .topline {
@@ -78,6 +78,10 @@ class Header extends React.Component {
             text-align: center;
             font-weight: 300;
             letter-spacing:2px;
+          }
+          .title a {
+            text-transform: none;
+            color: #000;
           }
           .subtitle {
             margin-bottom: 4rem;
