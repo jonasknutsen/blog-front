@@ -38,20 +38,11 @@ class Article extends React.Component {
                 "name": "Jonas Knutsen"
               },
               "publisher": {
-                "@type": "Organization",
-                "name": "Jonas Knutsen",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://google.com/logo.jpg"
-                }
+                "@type": "Person",
+                "name": "Jonas Knutsen"
               },
               "headline": "${post.title.rendered}",
               "description": "${post.excerpt.rendered}",
-              "image": [
-                "https://example.com/photos/1x1/photo.jpg",
-                "https://example.com/photos/4x3/photo.jpg",
-                "https://example.com/photos/16x9/photo.jpg"
-               ],
               "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "${post.link}"
