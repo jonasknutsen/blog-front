@@ -21,12 +21,12 @@ class AdSense extends React.Component {
         />
         <style jsx>{`
           .ad {
-            border: 1px solid #aaa;
+            border: 1px solid #525252;
             margin: .2rem;
             border: .2rem;
           }
           .ad-title {
-            color: #aaa;
+            color: #525252;
           }
         `}</style>
       </div>
