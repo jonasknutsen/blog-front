@@ -84,9 +84,9 @@ class Archive extends React.Component {
 }
 
 Archive.getInitialProps = async function () {
-  const postRes = await fetch('http://cms.jonasknutsen.com/wp-json/wp/v2/posts?per_page=100')
+  const postRes = await fetch('https://cms.jonasknutsen.com/wp-json/wp/v2/posts?per_page=100')
   const postData = await postRes.json()
-  const catRes = await fetch('http://cms.jonasknutsen.com/wp-json/wp/v2/categories?per_page=100')
+  const catRes = await fetch('https://cms.jonasknutsen.com/wp-json/wp/v2/categories?per_page=100')
   const catData = await catRes.json()
 
   return {
