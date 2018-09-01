@@ -9,7 +9,7 @@ class AdSense extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='ad'>
         <span className='ad-title'>Advertisement</span>
         <ins className='adsbygoogle'
           style={{ display: 'block' }}
@@ -20,6 +20,11 @@ class AdSense extends React.Component {
           data-adtest='on'
         />
         <style jsx>{`
+          .ad {
+            border: 1px solid #aaa;
+            margin: .2rem;
+            border: .2rem;
+          }
           .ad-title {
             color: #aaa;
           }
