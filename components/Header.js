@@ -84,7 +84,7 @@ class Header extends React.Component {
             color: #000;
           }
           .subtitle {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             text-align: center;
           }
         `}</style>
